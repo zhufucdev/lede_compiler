@@ -1,2 +1,5 @@
 config
+config.old
 .DS_Store
+targets
+sources.list
