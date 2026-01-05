@@ -15,13 +15,13 @@ git clone https://github.com/zhufucdev/lede_compiler
 cd ./lede_compiler
 ./build.sh
 ```
+
 This creates an image tagged `lede-compiler` on your machine
 
 If you would like to use some Ubuntu mirrors, put that shit in `./sources.list`
 so that it can be copied
 
-The base image in use is Ubuntu 22.04. Depends on what mirror
-you like, the concrete configuration may change
+The base image in use is Ubuntu 24.04.
 
 ### Configuration
 
@@ -40,7 +40,7 @@ Feel free to use your predefined configurations
 
 Exit the menu to start compiling
 
-It's docker, so there should be no dependency issue. 
+It's docker, so there should be no dependency issue.
 Even if there are, I believe you are capable of fixing them yourself
 
 ### Apple Silicon
@@ -50,6 +50,7 @@ compatible with x86 or other architect machines
 
 As far as I am concerned, the `golang` toolchain is broken
 unless specified as the system one in the `.config` file
+
 ```ini
 CONFIG_GOLANG_EXTERNAL_BOOTSTRAP_ROOT="/usr/bin/go"
 ```
@@ -58,3 +59,4 @@ CONFIG_GOLANG_EXTERNAL_BOOTSTRAP_ROOT="/usr/bin/go"
 
 With no issue raised, compile result will be copied to a
 `./bin/targets` directory
+
