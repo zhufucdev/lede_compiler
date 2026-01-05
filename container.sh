@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd /source
 if [ ! -d .git ]
 then
@@ -6,9 +8,8 @@ else
     git fetch
 fi
 ./scripts/feeds update -a
-./scripts/feeds update -a
 ./scripts/feeds install -a
 make menuconfig
-make download -j8
+make deconf download -j8
 FORCE_UNSAFE_CONFIGURE=1 make V=s -j8
 cp -r bin/targets /local
