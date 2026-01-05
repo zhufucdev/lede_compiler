@@ -3,7 +3,7 @@
 cd /source
 if [ ! -d .git ]
 then
-    git clone -b openwrt-24.10 --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt .
+    git clone -b openwrt-25.12 --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt .
 else
     git fetch
 fi
