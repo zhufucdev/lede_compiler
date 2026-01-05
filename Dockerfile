@@ -1,5 +1,5 @@
 FROM ubuntu:24.04
-COPY sources.list /etc/apt/sources.list
+COPY sources.list* /etc/apt
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -y && apt install -y build-essential clang flex bison g++ gawk \
