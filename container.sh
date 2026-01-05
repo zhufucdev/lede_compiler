@@ -5,7 +5,7 @@ if [ ! -d .git ]
 then
     git clone -b openwrt-25.12 --single-branch --filter=blob:none https://github.com/immortalwrt/immortalwrt .
 else
-    git fetch
+    git pull
 fi
 ./scripts/feeds update -a
 ./scripts/feeds install -a
